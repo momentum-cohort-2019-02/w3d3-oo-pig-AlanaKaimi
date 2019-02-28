@@ -1,30 +1,39 @@
+### Game-enstein
+
 import random
 
+class Dice:
+
+    def roll_dice(self):
+
+        return random.randint(1, 6)
 
 
-class Player():
 
-class ComputerPlayer():
+class ComputerPlayer:
     """ Represents the Player inside of the game console """
 
-    def __init__(self, roll, hold):
+    def __init__(self, name, action, score):
         """
         Parameters:
-        - roll -- the player rolls a dice resulting in a number between 1-6
-        - hold -- the player holds and adds current score to total score
+        - name -- the player's name
+        - action -- the action taken during the players turn
+        - score -- turn-score and total_score
         """
-        self.roll = roll
-        self.hold = hold
+        self.name = name
+        self.action = action
+        self.score = score
 
 
-
-    def roll_die():
+    def take_turn(self):
+        #randomly chooses to roll or hold
+            
+        #if roll:
         # generates # between 1-6
-            #if num >1 add num to current_score
+            #if num >1 add num to turn_score
             #if number = 1, turn is over, total_score doesn't change, next player
 
-    def hold_turn():
-        # ends turn, and adds current_score to total_score
+            # else hold: ends turn, and adds current_score to total_score
 
 
 
@@ -37,33 +46,26 @@ class HumanPlayer:
         Parameters:
         - name -- the player's name
         - action -- the action taken during the players turn
-        - score -- 
+        - score -- turn-score and total_score
         """
         self.name = name
         self.action = action
         self.score = score
     
-    def take_turn(self, roll_die, hold_turn):
-        
-
-
-
-
-    def roll_die(self):
+    def take_turn(self):
+        #input choice to roll or hold
+        #if roll:
         # generates # between 1-6
-        for x in range():
-            print random.randint(1,7)
-            #if num >1 add num to current_score
+            #if num >1 add num to turn_score
             #if number = 1, turn is over, total_score doesn't change, next player
 
-
-    def hold_turn(self, action, score):
+            # else hold: ends turn, and adds current_score to total_score 
 
 
 class Game():
     """ Defines game start, play, and end """
 
-    def __init__(self, player, action):
+    def __init__(self, player1, player2):
         """
         Parameters:
         
@@ -78,8 +80,7 @@ class Game():
         
 
     def game_play():
-        # Gets player action
-        # enters turn loop
+        # Alternate player turns
         # displays player rolls
         # displays current & total scores
 

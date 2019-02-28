@@ -1,27 +1,11 @@
 import random
 
+
+
 class Player():
-    """ Represents the Players """
 
-    def __init__(self, action, score):
-        """
-        Parameters:
-        - human -- the player outside
-        - computer -- the player inside
-        """
-        self.action = action
-        self.score = score
-
-    def human_player(self, action, score):
-        
-
-
-    def computer_player(self, action, score):
-
-
-
-class Actions():
-    """ Defines actions players can take """
+class ComputerPlayer():
+    """ Represents the Player inside of the game console """
 
     def __init__(self, roll, hold):
         """
@@ -31,6 +15,8 @@ class Actions():
         """
         self.roll = roll
         self.hold = hold
+
+
 
     def roll_die():
         # generates # between 1-6
@@ -42,6 +28,36 @@ class Actions():
 
 
 
+
+class HumanPlayer:
+    """ Represents the Player outside of the game console """
+
+    def __init__(self, name, action, score):
+        """
+        Parameters:
+        - name -- the player's name
+        - action -- the action taken during the players turn
+        - score -- 
+        """
+        self.name = name
+        self.action = action
+        self.score = score
+    
+    def take_turn(self, roll_die, hold_turn):
+        
+
+
+
+
+    def roll_die(self):
+        # generates # between 1-6
+        for x in range():
+            print random.randint(1,7)
+            #if num >1 add num to current_score
+            #if number = 1, turn is over, total_score doesn't change, next player
+
+
+    def hold_turn(self, action, score):
 
 
 class Game():
@@ -73,3 +89,15 @@ class Game():
         # When player total_score is >=100
             # declare winner
             # ask if player wants to play again
+
+###! Reference from stix:
+
+if __name__ == "__main__":
+    
+    # Need to randomize first player
+    p1 = ComputerPlayer()
+    p2 = HumanPlayer()
+
+    game = Game(p1, p2)
+    game.play_game()
+    
